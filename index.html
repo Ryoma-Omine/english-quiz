@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        body {
+            min-height: 100vh;
+            background: url("topimg.png") no-repeat center center;
+            background-size: contain;
+        }
+    </style>
+    <script>
+        // audioインスタンス作成
+        let music = new Audio("topbgm.mp3");
+        let music2 = new Audio("top.mp3");
+        function init() {
+            music.preload = "auto";
+            music.load();
+            play();
+
+            music.addEventListener("ended", function () {
+                music.currentTime = 0;
+                music.play();
+            }, false);
+        };
+
+        function play() {
+            music.loop = true;
+            music.play();
+        }
+
+        function stop() {
+            music.pause();
+            music.currentTime = 0;
+        }
+        // ボタンの効果音
+        function push() {
+            music.play();
+        }
+        init();
+
+    </script>
+</head>
+
+<body>
+    <ul class="nav justify-content-end">
+        <div class="mr-3 p-3">
+            <button onclick="stop()">⏸</button>
+            <button onclick="play()" id="play">▶♫</button>
+        </div>
+        <li class="ml-auto ">
+            <a href="https://twitter.com/intent/tweet?url=[テストURL]&text=[EnglishQuiz]" target="_blank"><i class="fab fa-twitter fa-3x p-3"></i></a>
+        </li>
+    </ul>
+    <div class="container text-center d-flex justify-content-center">
+        <h1 class="font-italic"><strong>日常英会話Quiz</strong></h1>
+    </div>
+    <footer class="fixed-bottom text-center p-3 d-md-flex justify-content-center">
+        <a href="quiz.html" type="button" onclick="push()" class="btn btn-primary p-4 col-md-4">START</a>
+    </footer>
+</body>
+
+</html>

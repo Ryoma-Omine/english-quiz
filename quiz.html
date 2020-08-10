@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <input type="button" value="⏸" onclick="stop()">
+  <input type="button" value="▶♫" onclick="play()" id="play">
+  <div class="container text-center">
+    <img id="mypic" class="img-fluid">
+    <div id="qa">質問</div>
+    <div id="qa2">質問２</div>
+    <div id="qa3" class="mt-5">質問３</div>
+
+    <div class="d-md-flex justify-content-center mb-4">
+      <div class="m-2">
+        <button type="button" onclick="push()" class="btn btn-primary col">Primary</button>
+      </div>
+      <div class="m-2">
+        <button type="button" onclick="push()" class="btn btn-primary col">Primary</button>
+      </div>
+      <div class="m-2">
+        <button type="button" onclick="push()" class="btn btn-primary col">Primary</button>
+      </div>
+      <div class="m-2">
+        <button type="button" onclick="push()" class="btn btn-primary col">Primary</button>
+      </div>
+      <div id="result" class="text-4rem"></div>
+    </div>
+    <a href="index.html" type="button" onclick="push()" class="btn btn-primary w-25 my-4">TOPへ戻る</a>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
